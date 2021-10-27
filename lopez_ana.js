@@ -17,8 +17,8 @@ class Usuario{
         return this.mascotas.length;
     }
 
-    addBook(libro){
-        this.libros.push(libro);
+    addBook(nombreLibro, autor){
+        this.libros.push({nombre: nombreLibro ,autor: autor });
     }
 
     getBookNames(){ 
@@ -47,7 +47,7 @@ usuario1.addMascota("Nueva Mascota");
 console.log(`Se agregó una nueva mascota`);
 
 
-usuario1.addBook({"nombre": "A corazón abierto", "autor": "Elvira Lindo"});
+usuario1.addBook("A corazón abierto", "Elvira Lindo");
 console.log("Se agregaó un nuevo libro");
 
 let cantMascotas = usuario1.countMascotas();
